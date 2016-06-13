@@ -1,0 +1,20 @@
+{
+	"name": "thunbolt-module/core",
+	"type": "thunbolt-package",
+	"require": {
+		"thunbolt/composer-installer": "dev-master",
+		"thunbolt/templates": "dev-master",
+		"thunbolt/thunbolt": "dev-master"
+	},
+	"autoload": {
+		"classmap": [
+			"src/"
+		]
+	},
+	"extra": {
+		"packageName": "core",
+		"configs": [
+			"src/config/config.neon"
+		]
+	}
+}
