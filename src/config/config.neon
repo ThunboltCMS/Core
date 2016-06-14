@@ -64,7 +64,7 @@ doctrine:
 	metadata:
 		Entity:
 			- %appDir%/modules
-			- %appDir%/installed
+			- %appDir%/../ins
 	types:
 		bit: Doctrine\DBAL\Types\BooleanType
 	filters:
