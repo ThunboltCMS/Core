@@ -5,6 +5,7 @@ namespace Thunbolt\Translation;
 use Kdyby\Translation\Translator;
 use Nette;
 use Symfony\Component\Translation\PluralizationRules;
+use Thunbolt\Errors\ErrorTemplate;
 use WebChemistry;
 
 class Translation {
@@ -115,7 +116,7 @@ class Translation {
 				$errors[$i][$index] = $this->translator->translate($row);
 			}
 		}
-		WebChemistry\Error::$messages = $errors;
+		ErrorTemplate::$messages = $errors;
 	}
 
 	protected function translateStrings() {
