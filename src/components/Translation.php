@@ -6,6 +6,7 @@ use Kdyby\Translation\Translator;
 use Nette;
 use Symfony\Component\Translation\PluralizationRules;
 use Thunbolt\Errors\ErrorTemplate;
+use Thunbolt\Templates\Filters;
 use WebChemistry;
 
 class Translation {
@@ -129,7 +130,7 @@ class Translation {
 	}
 
 	protected function translateFilters() {
-		WebChemistry\Template\Filters::$booleans = [
+		Filters::$booleans = [
 			$this->translator->translate('core.filters.no'),
 			$this->translator->translate('core.filters.yes')
 		];

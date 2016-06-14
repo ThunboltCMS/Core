@@ -1,58 +1,76 @@
 <?php
 
-require_once __DIR__ . '/error/Error.php';
-// Own error template
-if (!Tracy\Debugger::$errorTemplate) {
-	Tracy\Debugger::$errorTemplate = __DIR__ . '/error/templates/template.phtml';
-}
+namespace Thunbolt;
 
-/**
- * Tracy\Debugger::barDump() shortcut.
- *
- * @tracySkipLocation
- * @param mixed $var
- * @param int $length
- * @param int $depth
- */
-function bb($var, $length = NULL, $depth = NULL) {
-	$backtrace = debug_backtrace();
-	if (isset($backtrace[1]['class'])) {
-		$source = $backtrace[1]['class'] . '::' . $backtrace[1]['function'];
-	} else {
-		$source = basename($backtrace[0]['file']);
+use Tracy\Debugger;
+use Tracy\Dumper;
+
+class Bootstrap {
+
+	public function initialize() {
+		// Own error template
+		if (!Debugger::$errorTemplate) {
+			Debugger::$errorTemplate = __DIR__ . '/error/templates/template.phtml';
+		}
+
+		if (!function_exists('bb')) {
+			/**
+			 * Tracy\Debugger::barDump() shortcut.
+			 *
+			 * @tracySkipLocation
+			 * @param mixed $var
+			 * @param int $length
+			 * @param int $depth
+			 */
+			function bb($var, $length = NULL, $depth = NULL) {
+				$backtrace = debug_backtrace();
+				if (isset($backtrace[1]['class'])) {
+					$source = $backtrace[1]['class'] . '::' . $backtrace[1]['function'];
+				} else {
+					$source = basename($backtrace[0]['file']);
+				}
+				$line = $backtrace[0]['line'];
+				Debugger::barDump($var, $source . ' (' . $line . ')', [
+					Dumper::TRUNCATE => $length ? : Debugger::$maxLen,
+					Dumper::DEPTH => $depth ? : Debugger::$maxDepth
+				]);
+			}
+		}
+
+		if (!function_exists('dd')) {
+			/**
+			 * Tracy\Debugger::dump() shortcut.
+			 *
+			 * @tracySkipLocation
+			 * @param mixed $var
+			 * @param int $length
+			 * @param int $depth
+			 */
+			function dd($var, $length = NULL, $depth = NULL) {
+				Debugger::dump($var, [
+					Dumper::TRUNCATE => $length ? : Debugger::$maxLen,
+					Dumper::DEPTH => $depth ? : Debugger::$maxDepth
+				]);
+			}
+		}
+
+		if (!function_exists('timer')) {
+			/**
+			 * @param string $name
+			 */
+			function timer($name = NULL) {
+				Debugger::timer($name);
+			}
+		}
+
+		if (!function_exists('endTimer')) {
+			/**
+			 * @param string $name
+			 */
+			function endTimer($name = NULL) {
+				bb(Debugger::timer($name) * 1000);
+			}
+		}
 	}
-	$line = $backtrace[0]['line'];
-	Tracy\Debugger::barDump($var, $source . ' (' . $line . ')', [
-		Tracy\Dumper::TRUNCATE => $length ? : Tracy\Debugger::$maxLen,
-		Tracy\Dumper::DEPTH => $depth ? : Tracy\Debugger::$maxDepth
-	]);
-}
 
-/**
- * Tracy\Debugger::dump() shortcut.
- *
- * @tracySkipLocation
- * @param mixed $var
- * @param int $length
- * @param int $depth
- */
-function dd($var, $length = NULL, $depth = NULL) {
-	Tracy\Debugger::dump($var, [
-		Tracy\Dumper::TRUNCATE => $length ? : Tracy\Debugger::$maxLen,
-		Tracy\Dumper::DEPTH => $depth ? : Tracy\Debugger::$maxDepth
-	]);
-}
-
-/**
- * @param string $name
- */
-function timer($name = NULL) {
-	Tracy\Debugger::timer($name);
-}
-
-/**
- * @param string $name
- */
-function endTimer($name = NULL) {
-	bb(Tracy\Debugger::timer($name) * 1000);
 }
