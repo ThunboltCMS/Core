@@ -6,19 +6,11 @@ application:
 ## Services
 services:
 	core.grid.factory:
-		class: WebChemistry\Grid\IFactory
-		factory: WebChemistry\Grid\Factory
+		class: Thunbolt\Grid\IFactory
+		factory: Thunbolt\Grid\Factory
 	-
 		class: Thunbolt\Translation\Translation
 		tags: [run]
-	## Latte filters
-	nette.latteFactory:
-		setup:
-			- addFilter('date', [WebChemistry\Template\Filters(), 'date'])
-			- addFilter(NULL, [WebChemistry\Template\Filters(), 'load'])
-			- addFilter('number', [WebChemistry\Template\Filters(), 'number'])
-			- 'WebChemistry\Template\Macros::install(?->getCompiler())'(@self)
-			- addMacro('cacheFilter', @WebChemistry\Filter\Cache)
 
 extensions:
 	assets: WebChemistry\Assets\DI\AssetsExtension
@@ -28,6 +20,7 @@ extensions:
 	events: Kdyby\Events\DI\EventsExtension
 	annotations: Kdyby\Annotations\DI\AnnotationsExtension
 	doctrine: Kdyby\Doctrine\DI\OrmExtension
+	console: Kdyby\Console\DI\ConsoleExtension
 	## Images
 	images: WebChemistry\Images\DI\Extension
 	## Forms
