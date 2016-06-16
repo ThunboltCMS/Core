@@ -30,7 +30,6 @@ extensions:
 	## Thunbolt
 	shortcuts: Thunbolt\Application\DI\ShortCutsExtension
 	templates: Thunbolt\Templates\DI\TemplateExtension
-	thunbolt: Thunbolt\DI\ThunboltExtension
 
 settings:
 	paramsSettings:
