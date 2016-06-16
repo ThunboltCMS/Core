@@ -52,6 +52,13 @@ class ErrorTemplate extends Object {
 	}
 
 	/**
+	 * @return string
+	 */
+	public static function getErrorTemplate() {
+		return __DIR__ . '/templates/template.phtml';
+	}
+
+	/**
 	 * @param \Exception $exception
 	 */
 	public static function handleErrorPage(\Exception $exception) {
