@@ -24,7 +24,7 @@ extensions:
 	## Images
 	images: WebChemistry\Images\DI\Extension
 	## Forms
-	form: WebChemistry\Forms\DI\Extension
+	form: WebChemistry\Forms\DI\FormsExtension
 	formWizard: WebChemistry\Forms\Controls\DI\WizardExtension
 	formDoctrine: WebChemistry\Forms\DI\DoctrineExtension
 	## Thunbolt

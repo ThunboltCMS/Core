@@ -4,7 +4,8 @@
 	"require": {
 		"thunbolt/composer-installer": "dev-master",
 		"thunbolt/templates": "dev-master",
-		"thunbolt/thunbolt": "dev-master"
+		"thunbolt/thunbolt": "dev-master",
+		"webchemistry/forms": "^1.2.5"
 	},
 	"autoload": {
 		"classmap": [
