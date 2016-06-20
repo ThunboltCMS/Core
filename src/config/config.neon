@@ -30,6 +30,7 @@ extensions:
 	## Thunbolt
 	shortcuts: Thunbolt\Application\DI\ShortCutsExtension
 	templates: Thunbolt\Templates\DI\TemplateExtension
+	widgets: WebChemistry\Widgets\DI\WidgetsExtension
 
 settings:
 	paramsSettings:
