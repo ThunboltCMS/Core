@@ -17,7 +17,6 @@ extensions:
 	router: WebChemistry\Routing\DI\RouterExtension
 	settings: WebChemistry\Parameters\DI\ParametersExtension
 	## Kdyby, Doctrine
-	events: Kdyby\Events\DI\EventsExtension
 	annotations: Kdyby\Annotations\DI\AnnotationsExtension
 	doctrine: Kdyby\Doctrine\DI\OrmExtension
 	console: Kdyby\Console\DI\ConsoleExtension
@@ -43,9 +42,6 @@ assets:
 images:
 	registration:
 		upload: no
-
-events:
-	debugger: no
 
 annotations:
 	ignore:
