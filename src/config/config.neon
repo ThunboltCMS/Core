@@ -5,9 +5,6 @@ application:
 
 ## Services
 services:
-	core.grid.factory:
-		class: Thunbolt\Grid\IFactory
-		factory: Thunbolt\Grid\Factory
 	-
 		class: Thunbolt\Translation\Translation
 		tags: [run]
