@@ -14,12 +14,6 @@ class CoreExtension extends CompilerExtension {
 
 		$builder->addDefinition($this->prefix('form'))
 			->setClass(FormCase::class);
-
-		$builder->addDefinition($this->prefix('grid'))
-			->setClass(GridCase::class);
-
-		$builder->addDefinition($this->prefix('grid.factory'))
-			->setClass(GridFactory::class);
 	}
 
 }
