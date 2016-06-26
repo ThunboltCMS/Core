@@ -2,23 +2,23 @@
 
 namespace Thunbol\DI;
 
-use Nette\DI\CompilerExtension;
 use Nette\DI\Extensions\ExtensionsExtension;
 use Nette\DI\Statement;
+use Thunbolt\DI\VoidExtension;
 
 class SoftExtensionsExtension extends ExtensionsExtension {
 
 	public function loadConfiguration() {
 		$extensions = $this->compiler->getExtensions();
 		$prepare = [];
+		$voidExtension = new VoidExtension();
+
 		foreach ($this->getConfig() as $name => $class) {
 			if (isset($extensions[$name])) {
 				continue;
 			}
 			if ($class === FALSE) {
-				if (isset($prepare[$name])) {
-					unset($prepare[$name]);
-				}
+				$prepare[$name] = $voidExtension;
 				continue;
 			}
 			if ($class instanceof Statement) {
