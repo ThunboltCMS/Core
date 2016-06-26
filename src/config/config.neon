@@ -16,6 +16,7 @@ softExtensions:
 	formDoctrine: WebChemistry\Forms\DI\DoctrineExtension
 	widgets: WebChemistry\Widgets\DI\WidgetsExtension
 	shortcuts: Thunbolt\Application\DI\ShortCutsExtension
+	thunboltGrid: Thunbolt\Grid\DI\GridExtension
 
 extensions:
 	- Thunbolt\DI\CoreExtension
