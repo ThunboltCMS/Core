@@ -2,9 +2,10 @@
 
 namespace Entity;
 
-use Kdyby\Doctrine\Entities\MagicAccessors;
+use Kdyby\Doctrine\MagicAccessors\MagicAccessors;
 
 class Container {
+
 	use MagicAccessors;
 
 }

@@ -5,7 +5,8 @@
 		"thunbolt/composer-installer": "dev-master",
 		"thunbolt/templates": "dev-master",
 		"thunbolt/thunbolt": "dev-master",
-		"webchemistry/forms": "^1.2.5"
+		"webchemistry/forms": "^1.2.5",
+		"kdyby/doctrine-magic-accessors": "^0.2"
 	},
 	"autoload": {
 		"classmap": [
