@@ -61,6 +61,6 @@ doctrine:
 	dql:
 		string:
 			MATCH: DoctrineExtensions\Query\Mysql\MatchAgainst
-			DATE: WebChemistry\Doctrine\Addons\DateFunction
+			DATE: Thunbolt\Doctrine\Addons\DateFunction
 		numeric:
-			RAND: WebChemistry\Doctrine\Addons\Rand
+			RAND: Thunbolt\Doctrine\Addons\Rand
