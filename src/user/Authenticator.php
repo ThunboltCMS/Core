@@ -29,7 +29,7 @@ class Authenticator implements IAuthenticator {
 	 *
 	 * @param array $credentials
 	 * @return Security\Identity
-	 * @throws Exception
+	 * @throws \Exception
 	 * @throws Security\AuthenticationException
 	 */
 	public function authenticate(array $credentials) {
@@ -37,7 +37,7 @@ class Authenticator implements IAuthenticator {
 
 		$repository = $this->em->getRepository($this->repository);
 		if (!$repository instanceof IRepository) {
-			throw new Exception('Repository must be instace of WebChemistry\User\Interfaces\IRepository');
+			throw new \Exception('Repository must be instace of WebChemistry\User\Interfaces\IRepository');
 		}
 
 		$row = $repository->login($email);
