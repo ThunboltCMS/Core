@@ -9,25 +9,27 @@ services:
 		class: Thunbolt\Translation\Translation
 		tags: [run]
 
+softExtensions:
+	settings: WebChemistry\Parameters\DI\ParametersExtension
+	images: WebChemistry\Images\DI\Extension
+	formWizard: WebChemistry\Forms\Controls\DI\WizardExtension
+	formDoctrine: WebChemistry\Forms\DI\DoctrineExtension
+	thunboltCore: Thunbolt\DI\CoreExtension
+	widgets: WebChemistry\Widgets\DI\WidgetsExtension
+	shortcuts: Thunbolt\Application\DI\ShortCutsExtension
+
 extensions:
+	softExtensions: Thunbol\DI\SoftExtensionsExtension
 	assets: WebChemistry\Assets\DI\AssetsExtension
 	router: WebChemistry\Routing\DI\RouterExtension
-	settings: WebChemistry\Parameters\DI\ParametersExtension
 	## Kdyby, Doctrine
 	annotations: Kdyby\Annotations\DI\AnnotationsExtension
 	doctrine: Kdyby\Doctrine\DI\OrmExtension
 	console: Kdyby\Console\DI\ConsoleExtension
-	## Images
-	images: WebChemistry\Images\DI\Extension
 	## Forms
 	form: WebChemistry\Forms\DI\FormsExtension
-	formWizard: WebChemistry\Forms\Controls\DI\WizardExtension
-	formDoctrine: WebChemistry\Forms\DI\DoctrineExtension
 	## Thunbolt
-	shortcuts: Thunbolt\Application\DI\ShortCutsExtension
 	templates: Thunbolt\Templates\DI\TemplateExtension
-	widgets: WebChemistry\Widgets\DI\WidgetsExtension
-	- Thunbolt\DI\CoreExtension
 
 settings:
 	paramsSettings:
