@@ -37,7 +37,7 @@ class Authenticator implements IAuthenticator {
 
 		$repository = $this->em->getRepository($this->repository);
 		if (!$repository instanceof IRepository) {
-			throw new \Exception('Repository must be instace of WebChemistry\User\Interfaces\IRepository');
+			throw new \Exception('Repository must be instace of Thunbolt\User\Interfaces\IRepository');
 		}
 
 		$row = $repository->login($email);
