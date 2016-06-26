@@ -14,7 +14,6 @@ softExtensions:
 	images: WebChemistry\Images\DI\Extension
 	formWizard: WebChemistry\Forms\Controls\DI\WizardExtension
 	formDoctrine: WebChemistry\Forms\DI\DoctrineExtension
-	thunboltCore: Thunbolt\DI\CoreExtension
 	widgets: WebChemistry\Widgets\DI\WidgetsExtension
 	shortcuts: Thunbolt\Application\DI\ShortCutsExtension
 
