@@ -3,6 +3,9 @@
 namespace Thunbolt\User\DI;
 
 use Nette\DI\CompilerExtension;
+use Thunbolt\User\Authenticator;
+use Thunbolt\User\User;
+use Thunbolt\User\UserStorage;
 
 class UserExtension extends CompilerExtension {
 
@@ -16,7 +19,7 @@ class UserExtension extends CompilerExtension {
 		$builder = $this->getContainerBuilder();
 
 		$builder->addDefinition($this->prefix('authenticator'))
-			->setClass('Thunbolt\User\Authenticator', ['@Kdyby\Doctrine\EntityManager', $config['repository']]);
+			->setClass(Authenticator::class, ['@Kdyby\Doctrine\EntityManager', $config['repository']]);
 	}
 
 	public function beforeCompile() {
@@ -24,11 +27,11 @@ class UserExtension extends CompilerExtension {
 		$config = $this->validateConfig($this->defaults);
 
 		$builder->getDefinition('security.userStorage')
-			->setFactory('Thunbolt\User\UserStorage')
+			->setFactory(UserStorage::class)
 			->addSetup('setRepository', [$config['repository']]);
 
 		$builder->getDefinition('user')
-			->setClass('WebChemistry\User\User')
+			->setClass(User::class)
 			->setFactory('Thunbolt\User\User')
 			->addSetup('setAuthenticator', [$this->prefix('@authenticator')]);
 	}
