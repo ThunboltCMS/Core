@@ -33,7 +33,7 @@ extensions:
 
 settings:
 	paramsSettings:
-		entity: Entity\Parameters
+		entity: Entity\Parameter
 
 assets:
 	resources:
