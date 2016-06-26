@@ -3,9 +3,10 @@
 namespace Thunbol\DI;
 
 use Nette\DI\CompilerExtension;
+use Nette\DI\Extensions\ExtensionsExtension;
 use Nette\DI\Statement;
 
-class SoftExtensionsExtension extends CompilerExtension {
+class SoftExtensionsExtension extends ExtensionsExtension {
 
 	public function loadConfiguration() {
 		$extensions = $this->compiler->getExtensions();

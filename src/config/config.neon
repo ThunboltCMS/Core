@@ -19,7 +19,6 @@ softExtensions:
 	shortcuts: Thunbolt\Application\DI\ShortCutsExtension
 
 extensions:
-	softExtensions: Thunbol\DI\SoftExtensionsExtension
 	assets: WebChemistry\Assets\DI\AssetsExtension
 	router: WebChemistry\Routing\DI\RouterExtension
 	## Kdyby, Doctrine
