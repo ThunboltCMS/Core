@@ -79,7 +79,8 @@ class Translation {
 			Nette\Forms\Controls\SelectBox::VALID    => 'core.forms.select.valid',
 			WebChemistry\Forms\Controls\Date::VALID  => 'core.forms.webchemistry.date',
 			WebChemistry\Forms\Controls\Tags::VALID  => 'core.forms.webchemistry.tags',
-		];
+			Nette\Forms\Controls\UploadControl::VALID => 'core.forms.upload.valid'
+		] + Nette\Forms\Validator::$messages;
 		WebChemistry\Images\Controls\Checkbox::$labelContent = 'core.forms.deleteImage';
 		WebChemistry\Forms\Controls\Date::$dateFormat = 'core.date.datetime';
 	}
