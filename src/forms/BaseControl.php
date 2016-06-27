@@ -3,6 +3,7 @@
 namespace Thunbolt\Forms;
 
 use Kdyby\Doctrine\EntityManager;
+use Thunbolt\Components\Flashes;
 use WebChemistry\Forms\Control;
 
 class BaseControl extends Control {
@@ -10,9 +11,13 @@ class BaseControl extends Control {
 	/** @var EntityManager */
 	protected $em;
 
+	/** @var Flashes */
+	private $flashes;
+
 	public function __construct(FormCase $formCase) {
 		parent::__construct($formCase->getFactory());
 
+		$this->flashes = $formCase->getFlashes();
 		$this->em = $formCase->getEntityManager();
 	}
 
@@ -22,7 +27,7 @@ class BaseControl extends Control {
 	 * @return \stdClass
 	 */
 	public function flashMessage($message, $type = 'success') {
-		return parent::flashMessage($message, $type);
+		return $this->flashes->flashMessage($message, $type);
 	}
 
 }

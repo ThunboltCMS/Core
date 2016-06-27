@@ -3,6 +3,7 @@
 namespace Thunbolt\DI;
 
 use Nette\DI\CompilerExtension;
+use Thunbolt\Components\Flashes;
 use Thunbolt\Forms\FormCase;
 use Thunbolt\Grid\GridCase;
 use Thunbolt\Grid\GridFactory;
@@ -14,6 +15,9 @@ class CoreExtension extends CompilerExtension {
 
 		$builder->addDefinition($this->prefix('form'))
 			->setClass(FormCase::class);
+
+		$builder->addDefinition($this->prefix('flashes'))
+			->setClass(Flashes::class);
 	}
 
 }
