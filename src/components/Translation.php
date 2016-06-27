@@ -27,6 +27,16 @@ class Translation {
 		'years' => 'core.timeAgo.years'
 	];
 
+	/** @var array */
+	public static $flashes = [
+		'success' => 'core.flashes.success',
+		'error' => 'core.flashes.error',
+		'warning' => 'core.flashes.warning',
+		'info' => 'core.flashes.info',
+		'roll' => 'core.flashes.roll',
+		'remove' => 'core.flashes.remove'
+	];
+
 	/**
 	 * @param Translator $translator
 	 */
@@ -39,6 +49,10 @@ class Translation {
 		$this->translateStrings();
 		$this->translateTimeAgo();
 		$this->translateFilters();
+
+		foreach (self::$flashes as $key => $flash) {
+			self::$flashes[$key] = $this->translator->translate($flash);
+		}
 	}
 
 	protected function translateForms() {
