@@ -19,9 +19,6 @@ use Thunbolt\User\Interfaces\IUser;
  */
 class User extends Security\User {
 
-	/** @var object */
-	private $identity;
-
 	/** @var EntityManager */
 	private $entityManager;
 
@@ -98,7 +95,7 @@ class User extends Security\User {
 	/************************* User methods **************************/
 
 	public function merge() {
-		$this->entityManager->merge($this->identity->getEntity());
+		$this->entityManager->merge($this->getIdentity()->getEntity());
 		$this->entityManager->flush();
 	}
 
