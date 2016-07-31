@@ -2,10 +2,6 @@
 	"name": "thunbolt-module/core",
 	"type": "thunbolt-package",
 	"require": {
-		"thunbolt/composer-installer": "dev-master",
-		"thunbolt/templates": "~1.0.0@dev",
-		"thunbolt/thunbolt": "~1.0.0@dev",
-		"webchemistry/forms": "^1.2.5",
 		"kdyby/doctrine-magic-accessors": "^0.2"
 	},
 	"autoload": {
