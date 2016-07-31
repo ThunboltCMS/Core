@@ -16,7 +16,9 @@
 	"extra": {
 		"packageName": "core",
 		"configs": [
-			"src/config/config.neon"
+			"src/config/config.neon",
+			"src/config/extensions.neon",
+			"src/config/services.neon"
 		]
 	}
 }
