@@ -17,6 +17,7 @@ softExtensions:
 	widgets: WebChemistry\Widgets\DI\WidgetsExtension
 	shortcuts: Thunbolt\Application\DI\ShortCutsExtension
 	thunboltGrid: Thunbolt\Grid\DI\GridExtension
+	commands: Thunbolt\Commands\DI\CommandsExtension
 
 extensions:
 	- Thunbolt\DI\CoreExtension
