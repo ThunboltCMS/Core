@@ -3,6 +3,9 @@ application:
 	mapping:
 		*: App\Presenters\*Module\*Presenter
 
+tracy:
+	errorTemplate: Thunbolt\Errors\ErrorTemplate::getErrorTemplate()
+
 assets:
 	resources:
 		- '%appDir%/config/assets.yaml'

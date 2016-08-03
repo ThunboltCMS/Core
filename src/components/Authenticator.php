@@ -25,12 +25,10 @@ class Authenticator implements IAuthenticator {
 	}
 
 	/**
-	 * Performs an authentication.
-	 *
 	 * @param array $credentials
-	 * @return Security\Identity
-	 * @throws \Exception
 	 * @throws Security\AuthenticationException
+	 * @throws \Exception
+	 * @return Identity|Security\IIdentity
 	 */
 	public function authenticate(array $credentials) {
 		list($email, $password) = $credentials;
@@ -41,7 +39,6 @@ class Authenticator implements IAuthenticator {
 		}
 
 		$row = $repository->login($email);
-
 		if (!$row) {
 			throw new Security\AuthenticationException('core.user.notExists', self::IDENTITY_NOT_FOUND);
 		} elseif (!Security\Passwords::verify($password, $row->getPassword())) {
