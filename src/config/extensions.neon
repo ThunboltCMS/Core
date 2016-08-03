@@ -20,3 +20,4 @@ softExtensions:
 	## Thunbolt
 	shortcuts: Thunbolt\Application\DI\ShortCutsExtension
 	commands: Thunbolt\Commands\DI\CommandsExtension
+	user: Thunbolt\User\DI\UserExtension
