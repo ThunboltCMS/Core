@@ -81,7 +81,7 @@ class Translation {
 			WebChemistry\Forms\Controls\Tags::VALID  => 'core.forms.webchemistry.tags',
 			Nette\Forms\Controls\UploadControl::VALID => 'core.forms.upload.valid'
 		] + Nette\Forms\Validator::$messages;
-		WebChemistry\Images\Controls\Checkbox::$labelContent = 'core.forms.deleteImage';
+		WebChemistry\Images\Controls\Checkbox::$globalCaption = 'core.forms.deleteImage';
 		WebChemistry\Forms\Controls\Date::$dateFormat = 'core.date.datetime';
 	}
 
