@@ -16,10 +16,10 @@ class Authenticator implements IAuthenticator {
 	private $repository;
 
 	/**
-	 * @param EntityManager $em
 	 * @param string $repository
+	 * @param EntityManager $em
 	 */
-	public function __construct(EntityManager $em, $repository) {
+	public function __construct($repository, EntityManager $em) {
 		$this->em = $em;
 		$this->repository = $repository;
 	}
@@ -35,7 +35,7 @@ class Authenticator implements IAuthenticator {
 
 		$repository = $this->em->getRepository($this->repository);
 		if (!$repository instanceof IRepository) {
-			throw new \Exception('Repository must be instace of Thunbolt\User\Interfaces\IRepository');
+			throw new \Exception('Repository must be instace of ' . IRepository::class);
 		}
 
 		$row = $repository->login($email);
