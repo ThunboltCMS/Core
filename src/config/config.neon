@@ -6,10 +6,6 @@ application:
 tracy:
 	errorTemplate: Thunbolt\Errors\ErrorTemplate::getErrorTemplate()
 
-assets:
-	resources:
-		- '%appDir%/config/assets.yaml'
-
 annotations:
 	ignore:
 		- isAllowed
