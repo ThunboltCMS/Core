@@ -81,8 +81,12 @@ class Translation {
 			WebChemistry\Forms\Controls\Tags::VALID  => 'core.forms.webchemistry.tags',
 			Nette\Forms\Controls\UploadControl::VALID => 'core.forms.upload.valid'
 		] + Nette\Forms\Validator::$messages;
-		WebChemistry\Images\Controls\Checkbox::$globalCaption = 'core.forms.deleteImage';
-		WebChemistry\Forms\Controls\Date::$dateFormat = 'core.date.datetime';
+		if (class_exists(WebChemistry\Images\Controls\Checkbox::class)) {
+			WebChemistry\Images\Controls\Checkbox::$globalCaption = 'core.forms.deleteImage';
+		}
+		if (class_exists(WebChemistry\Forms\Controls\Date::class)) {
+			WebChemistry\Forms\Controls\Date::$dateFormat = 'core.date.datetime';
+		}
 	}
 
 	protected function translateDateTime() {
