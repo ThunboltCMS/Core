@@ -9,6 +9,7 @@ extensions:
 	form: WebChemistry\Forms\DI\FormsExtension
 	## Thunbolt
 	templates: Thunbolt\Templates\DI\TemplateExtension
+	- Thunbolt\DI\CoreExtension
 
 softExtensions:
 	## WebChemistry
