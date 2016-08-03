@@ -4,4 +4,4 @@ services:
 		tags: [run]
 	thunbolt.formCase: Thunbolt\Forms\FormCase
 	flashes: Thunbolt\Components\Flashes
-	thunbolt.authenticator: ('Entity\User')
+	thunbolt.authenticator: Thunbolt\User\Authenticator('Entity\User')
