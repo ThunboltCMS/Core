@@ -2,10 +2,16 @@
 
 namespace Entity;
 
-use Kdyby\Doctrine\MagicAccessors\MagicAccessors;
+use Nette\Utils\ObjectMixin;
 
 class Container {
 
-	use MagicAccessors;
+	/**
+	 * @param string $name
+	 * @return mixed
+	 */
+	public function __get($name) {
+		return ObjectMixin::get($this, $name);
+	}
 
 }
