@@ -13,7 +13,7 @@ extensions:
 softExtensions:
 	## WebChemistry
 	settings: WebChemistry\Parameters\DI\ParametersExtension
-	images: WebChemistry\Images\DI\Extension
+	images: WebChemistry\Images\DI\ImagesExtension
 	formWizard: WebChemistry\Forms\Controls\DI\WizardExtension
 	formDoctrine: WebChemistry\Forms\DI\DoctrineExtension
 	widgets: WebChemistry\Widgets\DI\WidgetsExtension
