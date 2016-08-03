@@ -10,10 +10,6 @@ assets:
 	resources:
 		- '%appDir%/config/assets.yaml'
 
-images:
-	registration:
-		upload: no
-
 annotations:
 	ignore:
 		- isAllowed
