@@ -12,7 +12,7 @@ annotations:
 
 ## Doctrine
 doctrine:
-	defaultRepositoryClassName: Repository\Container
+	defaultRepositoryClassName: Model\RepositoryContainer
 	metadata:
 		Entity:
 			- %appDir%/modules
