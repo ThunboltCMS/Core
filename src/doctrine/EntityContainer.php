@@ -1,10 +1,13 @@
 <?php
 
-namespace Entity;
+namespace Model;
 
 use Nette\Utils\ObjectMixin;
 
-class Container {
+/** @deprecated */
+class_alias('Model\EntityContainer', 'Entity\Container');
+
+class EntityContainer {
 
 	/**
 	 * @param string $name
