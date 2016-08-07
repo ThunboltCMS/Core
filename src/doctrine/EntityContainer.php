@@ -4,9 +4,6 @@ namespace Model;
 
 use Nette\Utils\ObjectMixin;
 
-/** @deprecated */
-class_alias('Model\EntityContainer', 'Entity\Container');
-
 class EntityContainer {
 
 	/**
@@ -18,3 +15,6 @@ class EntityContainer {
 	}
 
 }
+
+/** @deprecated */
+class_alias(EntityContainer::class, 'Entity\Container');
