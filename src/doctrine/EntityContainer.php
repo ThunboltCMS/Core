@@ -15,6 +15,3 @@ class EntityContainer {
 	}
 
 }
-
-/** @deprecated */
-class_alias(EntityContainer::class, 'Entity\Container');

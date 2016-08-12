@@ -10,6 +10,3 @@ class RepositoryContainer extends EntityRepository {
 	use TBaseRepository;
 
 }
-
-/** @deprecated */
-class_alias(RepositoryContainer::class, 'Repository\Container');
