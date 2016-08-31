@@ -6,7 +6,7 @@ use Kdyby\Doctrine\EntityManager;
 use Thunbolt\Components\Flashes;
 use WebChemistry\Forms\Control;
 
-class BaseControl extends Control {
+abstract class BaseControl extends Control {
 
 	/** @var EntityManager */
 	protected $em;

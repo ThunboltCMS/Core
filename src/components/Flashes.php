@@ -4,7 +4,7 @@ namespace Thunbolt\Components;
 
 use Nette\Application\Application;
 
-class Flashes {
+class Flashes implements IFlashes {
 
 	/** @var Application */
 	private $application;

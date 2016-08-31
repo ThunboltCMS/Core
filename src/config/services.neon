@@ -1,6 +1,0 @@
-services:
-	thunbolt.translation:
-		class: Thunbolt\Translation\Translation
-		tags: [run]
-	thunbolt.formCase: Thunbolt\Forms\FormCase
-	flashes: Thunbolt\Components\Flashes

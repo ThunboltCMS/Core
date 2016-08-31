@@ -9,12 +9,5 @@
 		"classmap": [
 			"src/"
 		]
-	},
-	"extra": {
-		"configs": [
-			"src/config/config.neon",
-			"src/config/extensions.neon",
-			"src/config/services.neon"
-		]
 	}
 }
