@@ -1,9 +1,8 @@
 {
-	"name": "thunbolt-module/core",
-	"type": "thunbolt-package",
+	"name": "thunbolt/core",
+	"type": "library",
 	"require": {
-		"kdyby/doctrine-magic-accessors": "^0.2",
-		"thunbolt/soft-extensions": "^1.0"
+		"kdyby/doctrine-magic-accessors": "^0.2"
 	},
 	"autoload": {
 		"classmap": [
