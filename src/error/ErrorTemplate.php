@@ -3,10 +3,9 @@
 namespace Thunbolt\Errors;
 
 use Nette\Application\BadRequestException;
-use Nette\Object;
 use Tracy\Debugger;
 
-class ErrorTemplate extends Object {
+class ErrorTemplate {
 
 	/** @var int|mixed */
 	public $code;
