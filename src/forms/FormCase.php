@@ -24,7 +24,7 @@ class FormCase {
 	 * @param IFormContainer $container
 	 * @param EntityManager $entityManager
 	 */
-	public function __construct(IFormContainer $container, EntityManager $entityManager, Flashes $flashes) {
+	public function __construct(IFormContainer $container, EntityManager $entityManager, IFlashes $flashes) {
 		$this->container = $container;
 		$this->entityManager = $entityManager;
 		$this->flashes = $flashes;
