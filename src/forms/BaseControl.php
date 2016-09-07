@@ -14,11 +14,11 @@ abstract class BaseControl extends Control {
 	/** @var IFlashes */
 	private $flashes;
 
-	public function __construct(FormCase $formCase) {
-		parent::__construct($formCase->getFactory());
+	public function __construct(FormArgs $formArgs) {
+		parent::__construct($formArgs->getFactory());
 
-		$this->flashes = $formCase->getFlashes();
-		$this->em = $formCase->getEntityManager();
+		$this->flashes = $formArgs->getFlashes();
+		$this->em = $formArgs->getEntityManager();
 	}
 
 	/**

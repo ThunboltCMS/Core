@@ -5,16 +5,15 @@ namespace Thunbolt;
 use Nette\DI\CompilerExtension;
 use Thunbolt\Components\Flashes;
 use Thunbolt\Components\IFlashes;
-use Thunbolt\Forms\FormCase;
-use Thunbolt\Translation\Translation;
+use Thunbolt\Forms\FormArgs;
 
 class CoreExtension extends CompilerExtension {
 
 	public function loadConfiguration() {
 		$builder = $this->getContainerBuilder();
 
-		$builder->addDefinition($this->prefix('formCase'))
-			->setClass(FormCase::class);
+		$builder->addDefinition($this->prefix('formArgs'))
+			->setClass(FormArgs::class);
 
 		$builder->addDefinition($this->prefix('flashes'))
 			->setClass(IFlashes::class)
