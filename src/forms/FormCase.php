@@ -6,9 +6,6 @@ use Kdyby\Doctrine\EntityManager;
 use Thunbolt\Components\IFlashes;
 use WebChemistry\Forms\Factory\IFormContainer;
 
-/**
- * @internal
- */
 class FormCase {
 
 	/** @var IFormContainer */

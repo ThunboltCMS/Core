@@ -1,6 +1,6 @@
 <?php
 
-namespace Model;
+namespace Thunbolt\Model;
 
 use Nette\Utils\ObjectMixin;
 

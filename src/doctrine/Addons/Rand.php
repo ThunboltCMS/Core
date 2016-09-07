@@ -1,4 +1,5 @@
 <?php
+
 namespace Thunbolt\Doctrine\Addons;
 
 use Doctrine\ORM\Query\AST\Functions\FunctionNode;

@@ -3,7 +3,7 @@
 namespace Thunbolt\Forms;
 
 use Kdyby\Doctrine\EntityManager;
-use Thunbolt\Components\Flashes;
+use Thunbolt\Components\IFlashes;
 use WebChemistry\Forms\Control;
 
 abstract class BaseControl extends Control {
@@ -11,7 +11,7 @@ abstract class BaseControl extends Control {
 	/** @var EntityManager */
 	protected $em;
 
-	/** @var Flashes */
+	/** @var IFlashes */
 	private $flashes;
 
 	public function __construct(FormCase $formCase) {

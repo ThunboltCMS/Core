@@ -1,6 +1,6 @@
 <?php
 
-namespace Model;
+namespace Thunbolt\Model;
 
 use Kdyby\Doctrine\EntityRepository;
 use WebChemistry\Forms\Doctrine\TBaseRepository;
