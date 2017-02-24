@@ -1,9 +1,6 @@
 {
 	"name": "thunbolt/core",
 	"type": "library",
-	"require": {
-		"kdyby/doctrine-magic-accessors": "^0.2"
-	},
 	"autoload": {
 		"classmap": [
 			"src/"
