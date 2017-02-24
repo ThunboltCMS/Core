@@ -4,7 +4,7 @@ namespace Thunbolt\Model;
 
 use Nette\Utils\ObjectMixin;
 
-class EntityContainer {
+abstract class BaseEntity {
 
 	/**
 	 * @param string $name
