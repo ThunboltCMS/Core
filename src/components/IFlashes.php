@@ -1,14 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Thunbolt\Components;
 
 interface IFlashes {
 
-	/**
-	 * @param string $message
-	 * @param string $type
-	 * @return \stdClass
-	 */
-	public function flashMessage($message, $type = 'success');
+	public function flashMessage(string $message, string $type = 'success'): \stdClass;
 
 }

@@ -1,11 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Thunbolt\Forms;
 
 use Kdyby\Doctrine\EntityManager;
 use Thunbolt\Components\IFlashes;
 use WebChemistry\Forms\Factory\IFormFactory;
 
+/**
+ * @internal
+ */
 class FormArgs {
 
 	/** @var IFormFactory */
@@ -27,24 +32,15 @@ class FormArgs {
 		$this->flashes = $flashes;
 	}
 
-	/**
-	 * @return IFlashes
-	 */
-	public function getFlashes() {
+	public function getFlashes(): IFlashes {
 		return $this->flashes;
 	}
 
-	/**
-	 * @return IFormFactory
-	 */
-	public function getFactory() {
+	public function getFactory(): IFormFactory {
 		return $this->container;
 	}
 
-	/**
-	 * @return EntityManager
-	 */
-	public function getEntityManager() {
+	public function getEntityManager(): EntityManager {
 		return $this->entityManager;
 	}
 

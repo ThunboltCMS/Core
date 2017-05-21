@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Thunbolt\Model;
 
 use Kdyby\Doctrine\EntityRepository;
@@ -14,9 +16,8 @@ abstract class BaseRepository extends EntityRepository {
 
 	/**
 	 * @throws \Exception
-	 * @return Doctrine
 	 */
-	protected function getConverter() {
+	protected function getConverter(): Doctrine {
 		if (!$this->converter) {
 			if (!class_exists(Doctrine::class)) {
 				throw new \Exception(Doctrine::class . ' class not exists.');
@@ -33,7 +34,7 @@ abstract class BaseRepository extends EntityRepository {
 	 * @param string $defaultEntity
 	 * @return object
 	 */
-	protected function convertToEntity(array $values, $defaultEntity = NULL, Settings $settings = NULL) {
+	protected function convertToEntity(array $values, string $defaultEntity = NULL, Settings $settings = NULL) {
 		return $this->getConverter()->toEntity($defaultEntity ?: $this->getEntityName(), $values, $settings);
 	}
 
@@ -42,7 +43,7 @@ abstract class BaseRepository extends EntityRepository {
 	 * @param Settings $settings
 	 * @return array
 	 */
-	protected function convertToArray($entity, Settings $settings = NULL) {
+	protected function convertToArray($entity, Settings $settings = NULL): array {
 		return $this->getConverter()->toArray($entity, $settings);
 	}
 

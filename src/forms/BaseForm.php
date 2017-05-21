@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Thunbolt\Forms;
 
 use Kdyby\Doctrine\EntityManager;
@@ -21,12 +23,7 @@ abstract class BaseForm extends Control {
 		$this->em = $formArgs->getEntityManager();
 	}
 
-	/**
-	 * @param string $message
-	 * @param string $type
-	 * @return \stdClass
-	 */
-	public function flashMessage($message, $type = 'success') {
+	public function flashMessage(string $message, string $type = 'success'): \stdClass {
 		return $this->flashes->flashMessage($message, $type);
 	}
 

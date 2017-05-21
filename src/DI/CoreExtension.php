@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Thunbolt;
 
 use Nette\DI\CompilerExtension;
@@ -9,7 +11,7 @@ use Thunbolt\Forms\FormArgs;
 
 class CoreExtension extends CompilerExtension {
 
-	public function loadConfiguration() {
+	public function loadConfiguration(): void {
 		$builder = $this->getContainerBuilder();
 
 		$builder->addDefinition($this->prefix('formArgs'))
