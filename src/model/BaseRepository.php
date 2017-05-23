@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Thunbolt\Model;
 
 use Kdyby\Doctrine\EntityRepository;
-use WebChemistry\Forms\Doctrine\TBaseRepository;
 use WebChemistry\Forms\Doctrine;
 use WebChemistry\Forms\Doctrine\Settings;
 

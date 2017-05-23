@@ -14,9 +14,6 @@ class CoreExtension extends CompilerExtension {
 	public function loadConfiguration(): void {
 		$builder = $this->getContainerBuilder();
 
-		$builder->addDefinition($this->prefix('formArgs'))
-			->setClass(FormArgs::class);
-
 		$builder->addDefinition($this->prefix('flashes'))
 			->setClass(IFlashes::class)
 			->setFactory(Flashes::class);
