@@ -21,4 +21,5 @@ class Rand extends FunctionNode {
 	public function getSql(\Doctrine\ORM\Query\SqlWalker $sqlWalker) {
 		return 'RAND()';
 	}
+
 }
