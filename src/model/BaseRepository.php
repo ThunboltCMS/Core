@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Thunbolt\Model;
 
-use Kdyby\Doctrine\EntityRepository;
+use Doctrine\ORM\EntityRepository;
 
 abstract class BaseRepository extends EntityRepository {
 
